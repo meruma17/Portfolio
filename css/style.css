@@ -87,6 +87,9 @@
     justify-content: center;
     align-items: center;
   }
+
+
+
   
 /* main content */
 .page-wrapper{
@@ -132,25 +135,68 @@ section.page-section1{
 .page-section1 p{
     width: 1000px;
     position: relative;
-    left: 50px; 
+    left: 45px; 
 }
 
 /* section grid work */
 
-#work{
-    margin: 0px 0px 0px 100px;
-    display: grid;
-    grid-template-columns:300px 300px 300px;
-    grid-template-rows: 2fr 1fr 1fr ;
-    grid-template-areas: "heading surf surf"
-    "heading LED calculator"
-    "heading pastel buddy" ;
-    position: relative;
-    left: 30px;
+
+#work1{
+    background-image: url(../images/02-portfolio-1.jpg);
 }
 
-#work h2{
-    grid-area: heading;
+#work2{
+    background-image: url(../images/02-portfolio-2.jpg);
+}
+
+#work3{
+    background-image: url(../images/02-portfolio-3.jpg);
+}
+
+#work4{
+    background-image: url(../images/02-portfolio-4.jpg);
+}
+
+#work5{
+    background-image: url(../images/02-run-buddy.jpg);
+}
+
+
+.heading{
+background-color: #20A39E;
+  color: #383838;
+  font-size: 18px;
+  font-weight: 600;
+  width: fit-content;
+  padding: 5px 10px 5px 10px;
+  align-items: flex-end;
+  justify-content: flex-end;
+  height: 60px;
+  position: relative;
+  top: -20px ;
+  cursor: pointer;
+
+}
+
+.heading p{
+    font-size: 10px;
+    color: #383838;
+    text-align: start;
+    position: relative;
+    top: -5px;
+
+}
+
+
+.work{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    position: relative;
+    left: -73px;
+}
+
+.work h2{
     font-size: 25px;
     border-right: 4px solid #20A39E;
     display: flex;
@@ -158,64 +204,61 @@ section.page-section1{
     justify-content: flex-end;
     text-align: end;
     padding-right: 10px;
+    border-right: 4px solid #20A39E;
+    width: 60px;
+}
+.work > h2{
+    flex: 0 0 20%;
+    text-align: right;
+    border-right: 4px solid #20A39E;
+}
+
+
+
+.work > .projects{
+    flex: 0 0 80%;
+}
+
+.projects{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
     position: relative;
-    left: -249px;
+    left: 35px;
 }
 
-#work1{
-    grid-area:surf;
-    background-image: url(../images/02-portfolio-1.jpg);
-}
 
-#work2{
-    grid-area: LED;
-    background-image: url(../images/02-portfolio-2.jpg);
-}
 
-#work3{
-    grid-area: calculator;
-    background-image: url(../images/02-portfolio-3.jpg);
-}
-
-#work4{
-    grid-area: pastel;
-    background-image: url(../images/02-portfolio-4.jpg);
-}
-
-#work5{
-    grid-area: buddy;
-    background-image: url(../images/02-run-buddy.jpg);
-}
-
-.categoryGridArea{
+.project{
+    min-height: 150px;
+    max-height: 150px;
+    flex-basis: calc(50% - 1em);
+    border: 3px solid #20A39E;
+    background-color: rgba(32, 153, 168, 0.7);
+    margin: 0.5em;
     background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin: 5px;
-  cursor: pointer;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
-.heading{
-    background-color: #20A39E;
-  padding: 15px;
-  height: 5px;
-  color: #383838;
-  font-size: 18px;
+.project:first-child{
+    min-height: 400px;
+    flex-basis: 100%;
 }
-
-
 /* section contact */
 section.page-section3{
         margin: 0px 0px 0px 100px;
         display: flex;
         position: relative;
-        left: 22px;
+        left: 19px;
 }
 
 .page-section3 h2{
-    text-align: end;
     font-size: 25px;
-    grid-area: titleItem ;
     border-right: 4px solid #20A39E;
     display: flex;
     align-items: flex-start;
@@ -248,3 +291,4 @@ section.page-section3{
 .page-section3 ul li a:hover{
     color: #EF5B5B;
 }
+
